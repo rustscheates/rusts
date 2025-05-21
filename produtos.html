@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RustSCheates - Produtos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="segunda-page">
+  <header>
+    RustSCheates
+  </header>
+
+  <nav class="nav-buttons" aria-label="Navegação da página">
+    <a href="index.html" class="btn" role="button">Voltar para página inicial</a>
+  </nav>
+
+  <section class="images-section" aria-label="Galeria de imagens">
+    <div class="image-box" tabindex="0">
+      <img src="./images/rust-game-3qu3miei00ax5hoq.jpg" alt="Imagem 1 do RustSCheates" />
+    </div>
+    <div class="image-box" tabindex="0">
+      <img src="./images/rust-game-72b079fxn1h603f4.jpg" alt="Imagem 2 do RustSCheates" />
+    </div>
+    <div class="image-box" tabindex="0">
+      <img src="./images/rust-game-n3vyqm033w39phno.jpg" alt="Imagem 3 do RustSCheates" />
+    </div>
+  </section>
+
+  <main class="products-container">
+    <article class="product-card" tabindex="0">
+      <h2 class="product-title">Macro No Recoil Humanizado</h2>
+      <p class="product-description">
+        <span class="promo-old-price">de R$49,90</span><span class="promo-new-price">por R$9,90!</span><br />
+        <span class="highlight">🕵️ Anonimato</span> e <span class="highlight">🔒 Segurança garantida</span>.<br />
+        Macro sofisticado que simula movimentos reais para melhorar sua precisão sem riscos, <span class="highlight">não detectável</span> e <span class="highlight">sem deixar rastros</span>.
+      </p>
+      <button class="btn-acquire" aria-label="Adquirir Macro No Recoil Humanizado">Adquirir</button>
+    </article>
+
+    <article class="product-card" tabindex="0">
+      <h2 class="product-title">Otimização</h2>
+      <p class="product-description">
+        Ajustes precisos para melhorar a performance do seu PC, garantindo maior fluidez e menos lag durante suas atividades e jogos, sem comprometer a segurança.
+      </p>
+      <button class="btn-acquire" aria-label="Adquirir Otimização">Adquirir</button>
+    </article>
+
+    <article class="product-card" tabindex="0">
+      <h2 class="product-title">Configuração para PC para Macrar</h2>
+      <p class="product-description">
+        Configuração completa e personalizada para transformar seu PC em uma máquina eficiente para execução de macros, <span class="highlight">não detectável</span> e segura.
+      </p>
+      <button class="btn-acquire" aria-label="Adquirir Configuração para PC para Macrar">Adquirir</button>
+    </article>
+
+    <article class="product-card" tabindex="0">
+      <h2 class="product-title">Bypass do EAC</h2>
+      <p class="product-description">
+        Solução avançada de bypass para o EAC (Easy Anti-Cheat), mantendo sua integridade livre de rastros e <span class="highlight">não detectável</span> para evitar banimentos.
+      </p>
+      <button class="btn-acquire" aria-label="Adquirir Bypass do EAC">Adquirir</button>
+    </article>
+  </main>
+
+  <script>
+    const buttons = document.querySelectorAll('.btn-acquire');
+    const phone = '5535991903745';
+    buttons.forEach((button, index) => {
+      button.addEventListener('click', () => {
+        const productTitle = document.querySelectorAll('.product-title')[index].textContent.trim();
+        const message = `Oii, RustSCheates gostaria de adquirir o produto ${encodeURIComponent(productTitle)}`;
+        const url = `https://wa.me/${phone}?text=${message}`;
+        window.open(url, '_blank', 'noopener');
+      });
+    });
+  </script>
+</body>
+</html>

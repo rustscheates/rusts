@@ -38,7 +38,7 @@
     </section>
 
     <section class="purchase-section" aria-label="Seção de compra">
-      <button class="purchase-button" onclick="window.location.href='produtos.html'">
+      <button class="purchase-button" id="btnComprar">
         Comprar Agora
       </button>
     </section>
@@ -66,6 +66,11 @@
     }
     updateRecoilDateTime();
     setInterval(updateRecoilDateTime, 1000);
+
+    // Adiciona o listener de clique para o botão "Comprar Agora"
+    document.getElementById('btnComprar').addEventListener('click', function() {
+      window.location.href = 'produtos.html';
+    });
   </script>
 </body>
 </html>

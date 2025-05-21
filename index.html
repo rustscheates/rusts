@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RustS Macro - Venda e Suporte Oficial</title>
+  <!-- Link para o CSS externo -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container" role="main">
+    <h1>RustS Macro</h1>
+    <h2>Potência e Suporte que Você Merece</h2>
+    <div id="recoil-update" aria-live="polite" aria-atomic="true">
+      No recoil atualizado : <!-- Será preenchido pelo JS -->
+    </div>
+
+    <p class="intro">
+      Eleve seu desempenho no Rust para outro nível com o RustS – o macro definitivo para sua jogatina! Desfrute de funcionalidades exclusivas, interface simples e suporte dedicado para tirar suas dúvidas e garantir a melhor experiência.
+    </p>
+
+    <!-- Gallery Section -->
+    <section class="gallery" aria-label="Galeria de imagens do jogo">
+      <img src="./images/rust-game-3qu3miei00ax5hoq.jpg" alt="Operadores táticos em ação sob o luar">
+      <img src="./images/rust-game-72b079fxn1h603f4.jpg" alt="Soldados em traje de inverno com armas avançadas">
+      <img src="./images/rust-game-n3vyqm033w39phno.jpg" alt="Jogador empunhando arma e se preparando para ataque">
+    </section>
+
+    <section class="features" aria-labelledby="features-title">
+      <h3 id="features-title">Funcionalidades do RustS</h3>
+      <ul>
+        <li>Automação de mira para precisão certeira</li>
+        <li>Controle total das configurações via UI intuitiva</li>
+        <li>Fácil integração e instalação rápida</li>
+        <li>Atualizações constantes para manter você um passo à frente</li>
+        <li>Compatibilidade com as versões mais recentes do jogo</li>
+      </ul>
+    </section>
+
+    <section class="purchase-section" aria-label="Seção de compra">
+      <button class="purchase-button" id="btnComprar">
+        Comprar Agora
+      </button>
+    </section>
+
+    <section class="support" aria-labelledby="support-title">
+      <h3 id="support-title">Suporte Oficial RustS</h3>
+      <p>Precisa de ajuda, suporte ou informações adicionais? Nossa equipe está pronta para te atender.</p>
+    </section>
+
+    <footer role="contentinfo">
+      &copy; 2024 RustS Macro. Todos os direitos reservados.
+    </footer>
+  </div>
+
+  <script>
+    function updateRecoilDateTime() {
+      const recoilEl = document.getElementById('recoil-update');
+      const now = new Date();
+      const formatted = now.toLocaleString('pt-BR', {
+        day: '2-digit', month: '2-digit', year: 'numeric',
+        hour: '2-digit', minute: '2-digit', second: '2-digit',
+        hour12: false
+      });
+      recoilEl.textContent = 'No recoil atualizado : ' + formatted;
+    }
+    updateRecoilDateTime();
+    setInterval(updateRecoilDateTime, 1000);
+
+    // Adiciona o listener de clique para o botão "Comprar Agora"
+    document.getElementById('btnComprar').addEventListener('click', function() {
+      window.location.href = 'produtos.html';
+    });
+  </script>
+</body>
+</html>
